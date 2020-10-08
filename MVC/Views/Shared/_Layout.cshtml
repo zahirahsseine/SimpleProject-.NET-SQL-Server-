@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container  text-center">
+        
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mon application ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function () {
+           
+            if (xhr.status == 401)
+                window.location = "/Home/Index";
+            $.get("http://localhost:4956/Home/ListUser/", function (data) {
+                console.log(data.list);
+                $.each(data.list, function (i, item) {
+                    $("#table").append("<tr><td>" + item.idUser + "</td><td>" + item.userName + "</td><td>" + item.pseudoUser + "</td></tr>");
+               
+                });
+               
+            });
+            $('#SignOut').click(function (e) {
+                e.preventDefault();
+                $.get("http://localhost:4956/Home/SignOut/", function (data, status) {});
+            });
+            $('#SignIn').click(function (e) {
+                e.preventDefault();
+                $.post("http://localhost:4956/Home/SignIn/", { pseudo: $("#pseudo").val(), password: $("#password").val() }, function (data, status) {
+                   
+                    if (data.url) window.location = data.url;
+                    else alert(data.message);
+                   
+                });
+            });
+            $("#AddUser").click(function (e) {
+                e.preventDefault();
+                if ($("#name").val().length == 0 || $("#pseudo").val().length == 0 || $("#password").val().length == 0)
+                    alert("Please fill all field!");
+                else if ($("#password").val() != $("#password").val())
+                    alert("the both passwords is not matched!");
+                else
+                $.post("http://localhost:4956/Home/AddUser/",
+                    user = { userName: $("#name").val(), pseudoUser: $("#pseudo").val(), passwordUser:$("#password").val() },
+                    function (data) {
+                                   alert(data.message);
+                      });
+            });
+        
+        
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EF_WPF.exe.config
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EF_WPF.exe
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EF_WPF.pdb
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EntityFramework.dll
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EntityFramework.xml
+D:\Formation\Programmation\C#\EF\EF_WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Formation\Programmation\C#\EF\EF_WPF\obj\Debug\EF_WPF.csprojAssemblyReference.cache
+D:\Formation\Programmation\C#\EF\EF_WPF\obj\Debug\EF_WPF.csproj.CoreCompileInputs.cache
+D:\Formation\Programmation\C#\EF\EF_WPF\obj\Debug\EF_WPF.csproj.CopyComplete
+D:\Formation\Programmation\C#\EF\EF_WPF\obj\Debug\EF_WPF.exe
+D:\Formation\Programmation\C#\EF\EF_WPF\obj\Debug\EF_WPF.pdb
